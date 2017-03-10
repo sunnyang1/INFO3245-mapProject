@@ -1,0 +1,86 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+        android:layout_width="174dp"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/editText" />
+
+        <Button
+            android:text="Search"
+            android:layout_width="107dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/button2"
+            android:onClick="ClickSearch" />
+        <Button
+            android:text="MapType"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/bMapType"
+            android:onClick="MAPTYPE" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+
+        <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/map"
+    android:name="com.google.android.gms.maps.SupportMapFragment"
+    android:layout_width="294dp"
+    android:layout_height="510dp"
+    tools:context="com.googlmaptesting.kun.demo_map.MapsActivity" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:text="+"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/BZoom_Out"
+                android:onClick="onZoom" />
+
+            <Button
+                android:text="-"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/BZoomIn"
+                android:onClick="onZoom" />
+
+            <Button
+                android:text="Me"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/mylocation" />
+
+            <Button
+                android:text="Camera"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_camera" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>
